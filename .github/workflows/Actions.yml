@@ -213,7 +213,7 @@ jobs:
         
         echo '修改基础信息'
         sed -i 's/192.168.1.1/192.168.1.233/g' package/base-files/files/bin/config_generate
-        sed -i 's/root:.*/root:$1$J9rqGen5$nr4KhD/WM7YRHPVNbbYmY\/:18351:0:99999:7:::/g' /etc/shadow
+        sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
         
         make defconfig
 
