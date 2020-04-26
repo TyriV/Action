@@ -141,8 +141,8 @@ jobs:
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
-        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_trojan=y
+        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_v2ray=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_v2ray-plugin=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_dns2socks=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_simple-obfs=y
@@ -192,6 +192,7 @@ jobs:
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号)
         cat >> .config <<EOF
         # CONFIG_VMDK_IMAGES is not set
+        # CONFIG_GRUB_CONSOLE is not set
         # CONFIG_PACKAGE_luci-app-docker is not set
         # CONFIG_PACKAGE_luci-app-wifischedule is not set
         # CONFIG_PACKAGE_luci-app-vsftpd is not set
@@ -211,9 +212,8 @@ jobs:
         
         sed -i 's/^[ \t]*//g' ./.config
         
-        echo '修改基础信息'
+        echo '修改网关地址'
         sed -i 's/192.168.1.1/192.168.1.233/g' package/base-files/files/bin/config_generate
-        sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
         
         make defconfig
 
