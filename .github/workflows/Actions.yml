@@ -153,7 +153,6 @@ jobs:
         CONFIG_PACKAGE_luci-app-syncdial=y
         CONFIG_PACKAGE_luci-app-ttyd=y
         CONFIG_PACKAGE_luci-app-webadmin=y
-        CONFIG_PACKAGE_luci-app-zerotier=y
         CONFIG_PACKAGE_luci-app-wol=y
         CONFIG_PACKAGE_luci-app-serverchan=y
         CONFIG_PACKAGE_luci-app-advancedsetting=y
@@ -208,6 +207,8 @@ jobs:
         # CONFIG_PACKAGE_luci-app-unblockneteasemusic-mini is not set
         # CONFIG_PACKAGE_luci-app-airplay2 is not set
         # CONFIG_PACKAGE_luci-app-music-remote-center is not set
+        # CONFIG_PACKAGE_luci-app-zerotier is not set
+        # CONFIG_PACKAGE_luci-app-amule is not set
         EOF
         
         sed -i 's/^[ \t]*//g' ./.config
