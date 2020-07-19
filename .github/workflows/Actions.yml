@@ -150,7 +150,6 @@ jobs:
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_redsocks2=y
         CONFIG_PACKAGE_luci-app-unblockmusic=y
         CONFIG_PACKAGE_luci-app-mwan3helper=y
-        CONFIG_PACKAGE_luci-app-flowoffload=y
         CONFIG_PACKAGE_luci-app-syncdial=y
         CONFIG_PACKAGE_luci-app-ttyd=y
         CONFIG_PACKAGE_luci-app-webadmin=y
@@ -187,6 +186,8 @@ jobs:
         CONFIG_PACKAGE_lrzsz=y
         CONFIG_PACKAGE_unzip=y
         CONFIG_PACKAGE_zip=y
+        CONFIG_PACKAGE_tar=y
+        CONFIG_PACKAGE_net-tools=y
         EOF
         
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号)
@@ -210,6 +211,7 @@ jobs:
         # CONFIG_PACKAGE_luci-app-music-remote-center is not set
         # CONFIG_PACKAGE_luci-app-zerotier is not set
         # CONFIG_PACKAGE_luci-app-amule is not set
+        # CONFIG_PACKAGE_luci-app-flowoffload is not set
         EOF
         
         sed -i 's/^[ \t]*//g' ./.config
