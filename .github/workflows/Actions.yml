@@ -56,7 +56,7 @@ jobs:
         git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git openwrt/package/luci-theme-opentomcat
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/luci-theme-argon
         git clone https://github.com/tty228/luci-app-serverchan openwrt/package/luci-app-serverchan
-        svn co https://github.com/jsda/packages2/trunk/ntlf9t/luci-app-advancedsetting openwrt/package/luci-app-advancedsetting
+        svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-advancedsetting openwrt/package/luci-app-advancedsetting
         git clone -b lede https://github.com/pymumu/luci-app-smartdns openwrt/package/luci-app-smartdns
         svn co https://github.com/pymumu/smartdns/trunk/package/openwrt openwrt/package/smartdns
       #  sed -i '24d' openwrt/package/luci-app-smartdns/Makefile
