@@ -246,13 +246,13 @@ jobs:
         echo "::set-env name=FILENAME::$(echo "OpenWrt-x86-`date -d "+8 hour" +%Y%m%d-%H%M%S`")"
         
     - name: 上传IMG固件
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@main
       with:
         name: ${{ env.FILENAME }}
         path: ./openwrt/artifact/
         
     - name: 上传IPK包
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@main
       with:
         name: OpenWrt_IPK
         path: ./openwrt/ipk/
