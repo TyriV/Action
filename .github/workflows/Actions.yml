@@ -52,7 +52,7 @@ jobs:
       run: |
         rm -rf openwrt/package/lean/luci-theme-argon
         svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus openwrt/package/luci-app-ssr-plus
-        git clone https://github.com/Mrbai98/luci-theme-atmaterial openwrt/package/luci-theme-atmaterial
+        git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git openwrt/package/luci-theme-edge
         git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git openwrt/package/luci-theme-opentomcat
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git openwrt/package/luci-theme-argon
         git clone https://github.com/tty228/luci-app-serverchan openwrt/package/luci-app-serverchan
@@ -161,7 +161,7 @@ jobs:
         
         # LuCI主题:
         cat >> .config <<EOF
-        CONFIG_PACKAGE_luci-theme-atmaterial=y
+        CONFIG_PACKAGE_luci-theme-edge=y
         CONFIG_PACKAGE_luci-theme-argon=y 
         CONFIG_PACKAGE_luci-theme-opentomcat=y
         EOF
@@ -194,6 +194,7 @@ jobs:
         cat >> .config <<EOF
         # CONFIG_VMDK_IMAGES is not set
         # CONFIG_GRUB_CONSOLE is not set
+        # CONFIG_PACKAGE_luci-theme-bootstrap is not set
         # CONFIG_PACKAGE_luci-app-docker is not set
         # CONFIG_PACKAGE_luci-app-wifischedule is not set
         # CONFIG_PACKAGE_luci-app-vsftpd is not set
