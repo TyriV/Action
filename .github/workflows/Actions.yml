@@ -194,7 +194,6 @@ jobs:
         cat >> .config <<EOF
         # CONFIG_VMDK_IMAGES is not set
         # CONFIG_GRUB_CONSOLE is not set
-        # CONFIG_PACKAGE_luci-theme-bootstrap is not set
         # CONFIG_PACKAGE_luci-app-docker is not set
         # CONFIG_PACKAGE_luci-app-wifischedule is not set
         # CONFIG_PACKAGE_luci-app-vsftpd is not set
